@@ -1,0 +1,37 @@
+{
+  "short_name": "Build Orders",
+  "name": "AoE2 Profile:Builds",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo64.png",
+      "type": "image/png",
+      "sizes": "64x64 32x32"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo192-maskable.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "description": "Create, manage and run AoE2 build orders from your phone",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}
