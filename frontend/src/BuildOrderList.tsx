@@ -70,7 +70,7 @@ export function getBuildOrders(): { [id: string]: IBuildOrder } {
 const newBuildOrder = () => {
   const id = uuidv4();
   const buildOrder = {
-    name: "new build order",
+    name: "nuova build",
     id: id,
     icon: Math.random() < 0.5 ? "villager" : "villagerf",
     steps: [],
@@ -126,7 +126,7 @@ function BuildOrderList() {
   return (
     <div className="buildorder-list">
       <h1>
-        <span>Build Orders</span>
+        <span>Build Order</span>
         <div className="menu" onClick={() => history.push("/settings")}>
           <FontAwesomeIcon icon={faCog} />
         </div>
@@ -134,7 +134,7 @@ function BuildOrderList() {
       {list}
       <button onClick={handleNewBuildClick}>
         <FontAwesomeIcon icon={faPlus} />
-        <span>New Build</span>
+        <span>Nuova Build</span>
       </button>
     </div>
   );

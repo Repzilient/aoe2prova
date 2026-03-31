@@ -10,7 +10,7 @@ interface IUploadBuildOrderProps {
 
 const UploadBuildOrder: React.FC<IUploadBuildOrderProps> = ({ onUpload }) => {
   const [files, setFiles] = useState<FileList | null>(null);
-  let fileLabel = files?.item(0)?.name || "No file chosen...";
+  let fileLabel = files?.item(0)?.name || "Nessun file selezionato...";
   const modalRef = useClickOutside(() => {
     onUpload(null);
   });
@@ -44,7 +44,7 @@ const UploadBuildOrder: React.FC<IUploadBuildOrderProps> = ({ onUpload }) => {
   return (
     <div className="upload-build-order-wrap">
       <div className="upload-build-order" ref={modalRef}>
-        <h2>Upload Build Order</h2>
+        <h2>Carica Build Order</h2>
         <label className="file-name">{fileLabel}</label>
         <input
           id="build-order-file"
@@ -54,11 +54,11 @@ const UploadBuildOrder: React.FC<IUploadBuildOrderProps> = ({ onUpload }) => {
         />
         <label htmlFor="build-order-file" className="file-upload-label">
           <FontAwesomeIcon icon={faFileUpload} />
-          <span>Choose a file</span>
+          <span>Scegli un file</span>
         </label>
         <div className="controls">
-          <button onClick={handleUpload}>Submit</button>
-          <button onClick={cancelUpload}>Cancel</button>
+          <button onClick={handleUpload}>Invia</button>
+          <button onClick={cancelUpload}>Annulla</button>
         </div>
       </div>
     </div>

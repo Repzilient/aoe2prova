@@ -2,7 +2,7 @@ import { IBuildOrder } from "./types";
 
 export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
   "1": {
-    name: "22 pop Scouts > Skirms",
+    name: "22 pop Scout > Schermagliatori",
     attribution: "Cicero",
     id: "1",
     icon: "scout",
@@ -154,7 +154,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "2": {
-    name: "23 pop Archers",
+    name: "23 pop Arcieri",
     attribution: "Cicero",
     id: "2",
     icon: "archer",
@@ -300,7 +300,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "3": {
-    name: "22 pop M@A > Archers",
+    name: "22 pop Fanteria Leggera > Arcieri",
     attribution: "Cicero",
     id: "3",
     icon: "manatarms",
@@ -473,7 +473,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "4": {
-    name: "28 pop Drush > Archers",
+    name: "28 pop Drush > Arcieri",
     attribution: "Cicero",
     id: "4",
     icon: "militia",
@@ -641,7 +641,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "5": {
-    name: "28+2 pop FC Knights",
+    name: "28+2 pop FC Cavalieri",
     attribution: "Cicero",
     id: "5",
     icon: "knight",
@@ -775,7 +775,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "6": {
-    name: "22 pop M@A > Towers",
+    name: "22 pop Fanteria Leggera > Torri",
     attribution: "Cicero",
     id: "6",
     icon: "tower",
@@ -1154,7 +1154,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "9": {
-    name: "28+2 pop FC - Unique Unit",
+    name: "28+2 pop FC - Unità Unica",
     attribution: "Cicero",
     id: "9",
     icon: "unique",
@@ -1290,7 +1290,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "10": {
-    name: "18 pop Mongol Scouts",
+    name: "18 pop Scout Mongoli",
     attribution: "Cicero",
     id: "10",
     icon: "scout",
@@ -1342,7 +1342,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
       },
       {
         kind: "note",
-        note: "Push deer 🦌",
+        note: "Spingi i cervi 🦌",
         duringPrevious: true,
       },
       {
@@ -1376,13 +1376,13 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
       },
       {
         kind: "note",
-        note: "Attack ASAP",
+        note: "Attacca il prima possibile",
         duringPrevious: true,
       },
     ],
   },
   "11": {
-    name: "22 pop Scouts > Castle",
+    name: "22 pop Scout > Castello",
     attribution: "Cicero",
     id: "11",
     icon: "scout",
@@ -1523,7 +1523,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "12": {
-    name: "22 pop Scouts > Archers",
+    name: "22 pop Scout > Arcieri",
     attribution: "Cicero",
     id: "12",
     icon: "scout",
@@ -1671,7 +1671,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "13": {
-    name: "28 pop drush > FC (archers)",
+    name: "28 pop drush > FC (arcieri)",
     attribution: "Cicero",
     id: "13",
     icon: "castle",
@@ -1740,7 +1740,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
         kind: "move",
         from: "gold",
         target: "wood",
-        note: "after collecting 10 gold, move the gold villager to wood",
+        note: "dopo aver raccolto 10 d'oro, sposta l'abitante dall'oro alla legna",
         duringPrevious: true,
       },
       {
@@ -1823,7 +1823,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "14": {
-    name: "Lithuanian 3 minute drush",
+    name: "Drush Lituano a 3 minuti",
     attribution: "Hera",
     id: "14",
     icon: "militia",
@@ -1848,7 +1848,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
       },
       {
         kind: "note",
-        note: "force drop off wood",
+        note: "forza il deposito della legna",
         duringPrevious: true,
       },
       {
@@ -1880,7 +1880,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "15": {
-    name: "17 pop Khmer Scouts",
+    name: "17 pop Scout Khmer",
     attribution: "HumzaCrumza",
     id: "15",
     icon: "scout",
@@ -1917,7 +1917,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
       },
       {
         kind: "note",
-        note: "push 2 deer",
+        note: "spingi 2 cervi",
         duringPrevious: true,
       },
       {
@@ -2021,7 +2021,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "16": {
-    name: "28 pop Malay Elephants",
+    name: "28 pop Elefanti Malesi",
     attribution: "Survivalist",
     id: "16",
     icon: "elephant",
@@ -2187,13 +2187,13 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
       },
       {
         kind: "note",
-        note: "research bow saw and gold mining",
+        note: "ricerca sega ad arco ed estrazione dell'oro",
         duringPrevious: true,
       },
     ],
   },
   "17": {
-    name: "28 pop drush > FC (knights)",
+    name: "28 pop drush > FC (cavalieri)",
     attribution: "Morley Games",
     id: "17",
     icon: "knight",
@@ -2274,7 +2274,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
         kind: "move",
         from: "gold",
         target: "wood",
-        note: "after collecting 10 gold, move the gold villager to wood",
+        note: "dopo aver raccolto 10 d'oro, sposta l'abitante dall'oro alla legna",
         duringPrevious: true,
       },
       {
@@ -2332,7 +2332,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
       },
       {
         kind: "note",
-        note: "research bloodlines and blacksmith upgrades",
+        note: "ricerca purezza di sangue e i potenziamenti del fabbro",
         duringPrevious: true,
       },
       {
@@ -2488,7 +2488,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "19": {
-    name: "28+2+2 pop Byzantine Fast Imp",
+    name: "28+2+2 pop Fast Imp Bizantino",
     attribution: "Cicero",
     id: "19",
     icon: "age4",
@@ -2608,7 +2608,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "20": {
-    name: "26 pop Fire Galleys",
+    name: "26 pop Galee Incendiarie",
     attribution: "Cicero",
     id: "20",
     icon: "fireship",
@@ -2721,7 +2721,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "21": {
-    name: "22 pop Eagle Scouts",
+    name: "22 pop Aquile Esploratrici",
     attribution: "Cicero",
     id: "21",
     icon: "eagle",
@@ -2836,7 +2836,7 @@ export const defaultBuildOrders: { [id: string]: IBuildOrder } = {
     ],
   },
   "22": {
-    name: "22 + 2 Italian FC",
+    name: "22 + 2 FC Italiano",
     attribution: "Morley Games",
     id: "22",
     icon: "castle",

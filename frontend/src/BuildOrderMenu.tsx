@@ -30,7 +30,7 @@ const handleDuplicate = (build: IBuildOrder) => {
   const id = uuidv4();
   const newBuild = JSON.parse(JSON.stringify(build));
   newBuild.id = id;
-  newBuild.name = newBuild.name + " (copy)";
+  newBuild.name = newBuild.name + " (copia)";
   delete newBuild.attribution;
   setBuildOrder(id, newBuild);
   return id;
@@ -58,7 +58,7 @@ const BuildOrderMenu: React.FC<IBuildOrderMenuProps> = ({
         }}
       >
         <FontAwesomeIcon icon={faBars} />
-        <label>Show List</label>
+        <label>Lista</label>
       </div>
       <div
         className="menu-item"
@@ -68,7 +68,7 @@ const BuildOrderMenu: React.FC<IBuildOrderMenuProps> = ({
         }}
       >
         <FontAwesomeIcon icon={faSync} />
-        <label>Restart</label>
+        <label>Riavvia</label>
       </div>
       <div
         className="menu-item"
@@ -78,7 +78,7 @@ const BuildOrderMenu: React.FC<IBuildOrderMenuProps> = ({
         }}
       >
         <FontAwesomeIcon icon={faPencilAlt} />
-        <label>Edit</label>
+        <label>Modifica</label>
       </div>
       <div
         className="menu-item"
@@ -89,7 +89,7 @@ const BuildOrderMenu: React.FC<IBuildOrderMenuProps> = ({
         }}
       >
         <FontAwesomeIcon icon={faClone} />
-        <label>Duplicate</label>
+        <label>Duplica</label>
       </div>
       <div
         className="menu-item"
@@ -99,7 +99,7 @@ const BuildOrderMenu: React.FC<IBuildOrderMenuProps> = ({
         }}
       >
         <FontAwesomeIcon icon={faDownload} />
-        <label>Download</label>
+        <label>Scarica</label>
       </div>
       <div
         className="menu-item"
@@ -109,7 +109,7 @@ const BuildOrderMenu: React.FC<IBuildOrderMenuProps> = ({
         }}
       >
         <FontAwesomeIcon icon={faCog} />
-        <label>Settings</label>
+        <label>Impostazioni</label>
       </div>
       <div
         className="menu-item"
@@ -120,7 +120,7 @@ const BuildOrderMenu: React.FC<IBuildOrderMenuProps> = ({
         }}
       >
         <FontAwesomeIcon icon={faTrash} />
-        <label>Remove</label>
+        <label>Rimuovi</label>
       </div>
     </div>
   );

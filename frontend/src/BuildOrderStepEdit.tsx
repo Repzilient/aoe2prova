@@ -133,7 +133,7 @@ const ResearchList: React.FC<IResearchListProps> = ({ techs, setTechs }) => {
     <div className="research-list">
       {techNodes}
       <button onClick={() => setTechs((techs || []).concat(["doublebitaxe"]))}>
-        Add Tech
+          Aggiungi Tecnologia
       </button>
     </div>
   );
@@ -175,11 +175,11 @@ const EditBuildOrderStep: React.FC<IEditBuildOrderStepProps> = ({
       <div className="buildorder-step-edit">
         {stringProperty(false, "note", noteState)}
         <button className="remove" onClick={onRemove}>
-          <span>Remove</span>
+          <span>Rimuovi</span>
           <FontAwesomeIcon icon={faTrash} />
         </button>
         <button onClick={doneEditing}>
-          <span>Done</span>
+          <span>Fatto</span>
           <FontAwesomeIcon icon={faCheck} />
         </button>
       </div>
@@ -227,11 +227,11 @@ const EditBuildOrderStep: React.FC<IEditBuildOrderStepProps> = ({
       {buildNumber}
       {techsList}
       <button className="remove" onClick={onRemove}>
-        <span>Remove</span>
+        <span>Rimuovi</span>
         <FontAwesomeIcon icon={faTrash} />
       </button>
       <button onClick={doneEditing}>
-        <span>Done</span>
+        <span>Fatto</span>
         <FontAwesomeIcon icon={faCheck} />
       </button>
     </div>

@@ -124,12 +124,12 @@ const speakNewStepsOutLoud = (
     zeroTimeStepsToDoFirst.forEach((step) => {
       message += `${getMessageForStep(step)},\n`;
     });
-    message += ", Then, ";
+    message += ", Poi, ";
   }
   const utterance = new SpeechSynthesisUtterance(
     message + getMessageForStep(currentStep)
   );
-  utterance.lang = "en-GB";
+  utterance.lang = "it-IT";
   speech.speak(utterance);
 };
 

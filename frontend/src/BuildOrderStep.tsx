@@ -104,27 +104,81 @@ function randomFromArray<T>(list: T[]): T {
 }
 
 const specialSpeechTexts: { [id: string]: string } = {
-  villagerf: "villager",
-  age2: "feudal age",
-  mango: "mangonel",
-  unique: "unique unit",
-  manatarmsupgrade: "man at arms",
-  pikemanupgrade: "pikeman",
-  crossbowupgrade: "crossbow",
-  "elite skirmisherupgrade": "elite skirmisher",
-  "eagel warriorupgrade": "eagle warrior",
-  age4: "imperial age",
-  doublebitaxe: "double-bit axe",
-  manatarms: "man at arms",
-  eaglescout: "eagle",
-  age3: "castle age",
-  horsecollar: "horse collar",
-  miningcamp: "mining camp",
-  siegeworkshop: "siege workshop",
-  tc: "town center",
-  lumbercamp: "lumber camp",
-  demo: "demolition ship",
-  ca: "cavalry archer",
+  villager: "abitante del villaggio",
+  villagerf: "abitante del villaggio",
+  age2: "età feudale",
+  mango: "mangano",
+  unique: "unità unica",
+  manatarmsupgrade: "fanteria leggera",
+  pikemanupgrade: "picchiere",
+  crossbowupgrade: "balestriere",
+  "elite skirmisherupgrade": "tiratore d'elite",
+  "eagel warriorupgrade": "guerriero aquila",
+  age4: "età imperiale",
+  doublebitaxe: "scure a doppio taglio",
+  manatarms: "fanteria leggera",
+  eaglescout: "aquila esploratrice",
+  age3: "età dei castelli",
+  horsecollar: "collare",
+  miningcamp: "campo minerario",
+  siegeworkshop: "laboratorio d'assedio",
+  tc: "centro città",
+  lumbercamp: "falegnameria",
+  demo: "nave da demolizione",
+  ca: "arciere a cavallo",
+  sheep: "pecora",
+  berries: "bacche",
+  farm: "fattoria",
+  boar: "cinghiale",
+  secondboar: "secondo cinghiale",
+  food: "cibo",
+  mill: "mulino",
+  deer: "cervo",
+  fish: "pesce",
+  wood: "legna",
+  tree: "albero",
+  gold: "oro",
+  stone: "pietra",
+  house: "casa",
+  barracks: "alloggiamento",
+  stable: "scuderia",
+  range: "campo di tiro con l'arco",
+  market: "mercato",
+  blacksmith: "fabbro",
+  dock: "porto",
+  monastery: "monastero",
+  castle: "castello",
+  university: "università",
+  krepost: "krepost",
+  tower: "torre di guardia",
+  militia: "milizia",
+  knight: "cavaliere",
+  skirmisher: "schermagliatore",
+  archer: "arciere",
+  scout: "scout",
+  "light cav": "cavalleria leggera",
+  elephant: "elefante",
+  galley: "galea",
+  lancer: "lanciere",
+  fishingship: "nave da pesca",
+  ram: "ariete",
+  camel: "cammello",
+  fireship: "nave incendiaria",
+  scorpion: "scorpione",
+  monk: "monaco",
+  spear: "lanciere",
+  ballistics: "balistica",
+  builder: "costruttore",
+  chemistry: "chimica",
+  fletching: "impennatura",
+  forging: "forgiatura",
+  bodkin: "freccia a punteruolo",
+  "scale barding": "bardatura a scaglie",
+  "scale mail": "cotta a scaglie",
+  "padded armor": "armatura imbottita",
+  "silver crown": "corona d'argento",
+  "gold crown": "corona d'oro",
+  nothing: "niente",
 };
 
 export const foodIcons = [
@@ -154,11 +208,11 @@ function replaceVariablesInText(text: string, variables: any): string {
     const valueText = getIconText(variables[key]);
     result = result.split(`$${key}`).join(valueText);
   });
-  result = result.split("move it to builder").join("make it a builder");
-  result = result.split("move them to builder").join("make them builders");
+  result = result.split("spostalo su costruttore").join("fallo costruttore");
+  result = result.split("spostali su costruttore").join("falli costruttori");
   result = result
-    .split("Move one villager from boar to boar")
-    .join("lure the second boar");
+    .split("Sposta un abitante del villaggio da cinghiale a cinghiale")
+    .join("attira il secondo cinghiale");
   return result;
 }
 
@@ -167,8 +221,8 @@ const kindMessageMapping: { [id: string]: StepStringRenderer } = {
     let message;
     if (step.number && step.number > 1) {
       const taskNtoResource = randomFromArray([
-        "The next $number villagers should go to $target",
-        "Send the next $number villagers to $target",
+        "I prossimi $number abitanti del villaggio dovrebbero andare su $target",
+        "Manda i prossimi $number abitanti del villaggio su $target",
       ]);
       message = replaceVariablesInText(taskNtoResource, {
         target: step.target,
@@ -176,8 +230,8 @@ const kindMessageMapping: { [id: string]: StepStringRenderer } = {
       });
     } else {
       const task1toResource = randomFromArray([
-        "The next villager should go to $target",
-        "Send the next villager to $target",
+        "Il prossimo abitante del villaggio dovrebbe andare su $target",
+        "Manda il prossimo abitante del villaggio su $target",
       ]);
       message = replaceVariablesInText(task1toResource, {
         target: step.target,
@@ -189,7 +243,7 @@ const kindMessageMapping: { [id: string]: StepStringRenderer } = {
     let message;
     if (step.number && step.number > 1) {
       const taskNtoResource = randomFromArray([
-        "Move $number villagers from $from to $target",
+        "Sposta $number abitanti del villaggio da $from a $target",
       ]);
       message = replaceVariablesInText(taskNtoResource, {
         target: step.target,
@@ -198,7 +252,7 @@ const kindMessageMapping: { [id: string]: StepStringRenderer } = {
       });
     } else {
       const task1toResource = randomFromArray([
-        "Move one villager from $from to $target",
+        "Sposta un abitante del villaggio da $from a $target",
       ]);
       message = replaceVariablesInText(task1toResource, {
         from: step.from,
@@ -210,17 +264,17 @@ const kindMessageMapping: { [id: string]: StepStringRenderer } = {
   build: (step) => {
     let message;
     if (step.from && ["villager", "villagerf"].indexOf(step.from) >= 0) {
-      message = "the next villager should build";
+      message = "il prossimo abitante del villaggio dovrebbe costruire";
     } else if (step.from && ["nothing", "builder"].indexOf(step.from) < 0) {
       if (step.number && step.number > 1) {
-        message = "order $number villagers from $from to build";
+        message = "ordina a $number abitanti del villaggio da $from di costruire";
       } else {
-        message = "order one villager from $from to build";
+        message = "ordina a un abitante del villaggio da $from di costruire";
       }
     } else if (step.number && step.number > 1) {
-      message = "$number villagers should build";
+      message = "$number abitanti del villaggio dovrebbero costruire";
     } else {
-      message = "build";
+      message = "costruisci";
     }
     if (step.buildAmount && step.buildAmount > 1) {
       message = `${message} ${step.buildAmount}`;
@@ -233,39 +287,39 @@ const kindMessageMapping: { [id: string]: StepStringRenderer } = {
       message = `${message} $build`;
     }
     if (step.target && step.target !== "nothing") {
-      message = `${message}. Then move to $target`;
+      message = `${message}. Poi sposta su $target`;
     }
     return replaceVariablesInText(message, {
       from: step.from,
       target: step.target,
       number: step.number,
-      anOrA: "aoeiuy".indexOf(step.build?.charAt(0) || "z") > 0 ? "an" : "a",
+      anOrA: "aoeiuy".indexOf(step.build?.charAt(0) || "z") > 0 ? "un" : "un", // Simplified "an" or "a" in italian to "un", this works mostly.
       build: step.build || "house",
     });
   },
   research: (step) => {
-    return `research ${(step.techs || []).map(getIconText).join(",")}`;
+    return `ricerca ${(step.techs || []).map(getIconText).join(",")}`;
   },
   wheelbarrow: (step) => {
-    return `research wheelbarrow`;
+    return `ricerca carriola`;
   },
   age2: (step) => {
-    return `go up to feudal age`;
+    return `passa all'età feudale`;
   },
   age3: (step) => {
-    return `go up to castle age`;
+    return `passa all'età dei castelli`;
   },
   age4: (step) => {
-    return `go up to imperial age`;
+    return `passa all'età imperiale`;
   },
   loom: (step) => {
-    return `research loom`;
+    return `ricerca telaio`;
   },
   note: (step) => {
-    return step.note || "missing note";
+    return step.note || "nota mancante";
   },
   default: (step) => {
-    return "next step";
+    return "prossimo passaggio";
   },
 };
 
@@ -276,7 +330,7 @@ export function getMessageForStep(step: IBuildOrderStep): string {
   }
   let message = renderer(step);
   if (step.subSteps && step.subSteps.length > 0) {
-    message += "\n. Meanwhile, ";
+    message += "\n. Nel frattempo, ";
     step.subSteps.forEach((substep) => {
       message += getMessageForStep(substep) + ",\n";
     });

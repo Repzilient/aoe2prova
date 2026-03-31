@@ -30,12 +30,12 @@ function readCountDown(
     return;
   }
   if (countDownFrom <= 0) {
-    const utterance = new SpeechSynthesisUtterance("Go!");
-    utterance.lang = "en-GB";
+    const utterance = new SpeechSynthesisUtterance("Via!");
+    utterance.lang = "it-IT";
     window.speechSynthesis.speak(utterance);
   } else {
     const utterance = new SpeechSynthesisUtterance("" + countDownFrom);
-    utterance.lang = "en-GB";
+    utterance.lang = "it-IT";
     window.speechSynthesis.speak(utterance);
     countDownTimeout.current = window.setTimeout(() => {
       readCountDown(readOutLoud, countDownFrom - 1, countDownTimeout);

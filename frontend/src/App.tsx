@@ -64,8 +64,8 @@ function App() {
           element && element.setAttribute("style", "display: none;");
         }}
       >
-        <p>An update is available! </p>
-        <p>Close the app and restart to apply the upgrade</p>
+        <p>È disponibile un aggiornamento!</p>
+        <p>Chiudi l'app e riavviala per applicare l'aggiornamento</p>
       </div>
       <div
         className={`install-app ${
@@ -74,7 +74,7 @@ function App() {
         onClick={installApp}
       >
         <FontAwesomeIcon icon={faMobileAlt} />
-        <label>Install the App</label>
+        <label>Installa l'App</label>
         <button
           onClick={(e) => {
             setHideInstall(true);

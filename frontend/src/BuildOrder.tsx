@@ -22,16 +22,16 @@ import { useSetting } from "./hooks";
 import Footer from "./Footer";
 
 export const stepKinds: { [id: string]: string } = {
-  create: "Create Villager",
-  build: "Build",
-  loom: "Get Loom",
-  move: "Move",
-  research: "Research",
-  wheelbarrow: "Wheelbarrow",
-  note: "Note",
-  age2: "Feudal Age",
-  age3: "Castle Age",
-  age4: "Imperial Age",
+  create: "Crea Abitante",
+  build: "Costruisci",
+  loom: "Sviluppa Telaio",
+  move: "Sposta",
+  research: "Ricerca",
+  wheelbarrow: "Carriola",
+  note: "Nota",
+  age2: "Età Feudale",
+  age3: "Età dei Castelli",
+  age4: "Età Imperiale",
 };
 
 const addResourcesFromStep = (
@@ -352,7 +352,7 @@ function BuildOrder() {
   }, [playing, wakeLockRef]);
 
   if (!buildOrder) {
-    return <div>Loading</div>;
+    return <div>Caricamento</div>;
   }
 
   const changeGameTime = (time: number, pause = true, withUpdate = true) => {
