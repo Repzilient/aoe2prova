@@ -41,7 +41,7 @@ function EditBuildOrder() {
   }, [id]);
   const [loadingFromFile, setLoadingFromFile] = useState(false);
   if (!build) {
-    return <div>Loading...</div>;
+    return <div>Caricamento...</div>;
   }
   const updateBuild = (
     build: ISortableBuildOrder,
@@ -152,11 +152,11 @@ function EditBuildOrder() {
         <div className="steps">{steps}</div>
         <button className="upload-build" onClick={loadFromFile}>
           <FontAwesomeIcon icon={faUpload} />
-          <label>From File</label>
+          <label>Da File</label>
         </button>
         <button className="add-step" onClick={addStep}>
           <FontAwesomeIcon icon={faPlus} />
-          <label>Add Step</label>
+          <label>Aggiungi Passaggio</label>
         </button>
       </div>
       {loadingFromFile ? <UploadBuildOrder onUpload={onUpload} /> : null}

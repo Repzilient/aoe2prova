@@ -46,14 +46,14 @@ const Settings: React.FC = () => {
 
   return (
     <div className="settings">
-      <h1>Settings</h1>
+      <h1>Impostazioni</h1>
 
       <div className="version">
         {process.env.REACT_APP_NAME} v.{process.env.REACT_APP_VERSION}
       </div>
 
       <div className={`property number`}>
-        <label>Countdown from</label>
+        <label>Conto alla rovescia da</label>
         <input
           type="number"
           min={0}
@@ -67,7 +67,7 @@ const Settings: React.FC = () => {
         />
       </div>
       <div className={`property boolean`}>
-        <label>Marking per Villager</label>
+        <label>Segno per Abitante del Villaggio</label>
         <Switch
           onChange={() =>
             updateSetting("markingPerVil", !settings.markingPerVil)
@@ -78,7 +78,7 @@ const Settings: React.FC = () => {
         />
       </div>
       <div className={`property boolean`}>
-        <label>Read Steps Out Loud</label>
+        <label>Leggi i passaggi ad alta voce</label>
         <Switch
           onChange={() =>
             updateSetting("readStepsOutLoud", !settings.readStepsOutLoud)
@@ -91,7 +91,7 @@ const Settings: React.FC = () => {
         />
       </div>
       <div className={`property boolean`}>
-        <label>Malay TC</label>
+        <label>Centro città Malese</label>
         <Switch
           onChange={() => {
             const newValue = !settings.malayTC;
@@ -102,7 +102,7 @@ const Settings: React.FC = () => {
         />
       </div>
       <div className={`property boolean`}>
-        <label>Persian TC</label>
+        <label>Centro città Persiano</label>
         <Switch
           onChange={() => {
             const newValue = !settings.persianTC;
@@ -113,7 +113,7 @@ const Settings: React.FC = () => {
         />
       </div>
       <div className={`property boolean`}>
-        <label>Portuguese Techs</label>
+        <label>Tecnologie Portoghesi</label>
         <Switch
           onChange={() => {
             const newValue = !settings.portugueseTechs;
@@ -129,15 +129,15 @@ const Settings: React.FC = () => {
       </div>
       <button onClick={handleRestoreDefaults}>
         <FontAwesomeIcon icon={faSync} />
-        <span>Restore Default Builds</span>
+        <span>Ripristina Build Predefinite</span>
       </button>
       <button onClick={saveSettings}>
         <FontAwesomeIcon icon={faCheck} />
-        <span>Save</span>
+        <span>Salva</span>
       </button>
       <button className="cancel" onClick={cancelSettings}>
         <FontAwesomeIcon icon={faTimes} />
-        <span>Cancel</span>
+        <span>Annulla</span>
       </button>
     </div>
   );
